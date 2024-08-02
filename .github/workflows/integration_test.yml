@@ -60,4 +60,4 @@ jobs:
       - name: 🚀 Run Integration Test
         run: |
           flutter config --enable-web
-          flutter drive --driver=test_driver/integration_test.dart --target=integration_test/app_test.dart -d chrome --headless --verbose
+          flutter drive --driver=test_driver/integration_test.dart --target=integration_test/app_test.dart -d web-server --headless --verbose
