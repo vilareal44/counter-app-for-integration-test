@@ -66,4 +66,4 @@ jobs:
           printenv DISPLAY
           echo "foobar"
           flutter config --enable-web
-          flutter drive --driver=test_driver/integration_test.dart --target=integration_test/app_test.dart --browser-name chrome --no-headless
+          flutter drive --driver=test_driver/integration_test.dart --target=integration_test/app_test.dart -d web-server --browser-name chrome --no-headless
