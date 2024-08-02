@@ -12,6 +12,7 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
+          flutter-version: 3.19.5
           cache: true
 
       - name: Install Chrome Browser
@@ -59,4 +60,4 @@ jobs:
       - name: 🚀 Run Integration Test
         run: |
           flutter config --enable-web
-          flutter drive --driver=test_driver/integration_test.dart --target=integration_test/app_test.dart -d web-server --profile --browser-name=chrome
+          flutter drive --driver=test_driver/integration_test.dart --target=integration_test/app_test.dart -d chrome
