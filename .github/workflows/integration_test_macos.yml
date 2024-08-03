@@ -22,4 +22,4 @@ jobs:
           echo "foo"
           flutter config --enable-web
           chromedriver --port=4444 --trace-buffer-size=100000 &          
-          flutter drive --driver=test_driver/integration_test.dart --target=integration_test/app_test.dart -d web-server --release --browser-name=chrome   | tee output.log
+          flutter drive --driver=test_driver/integration_test.dart --target=integration_test/app_test.dart -d web-server --release --browser-name=chrome
