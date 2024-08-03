@@ -26,6 +26,7 @@ void main() {
 
       // Verify the counter increments by 1.
       expect(find.text('1'), findsOneWidget);
+      expect(1, 2);
     });
   });
 }
