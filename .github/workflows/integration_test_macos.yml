@@ -3,7 +3,7 @@ on: [workflow_dispatch]
 run-name: e2e Test by @${{ github.actor }}
 jobs:
   drive:
-    runs-on: macos-latest
+    runs-on: macos-12
     steps:
       - name: 📚 Git Checkout
         uses: actions/checkout@v3
@@ -18,7 +18,6 @@ jobs:
       - name: Install and start Colima
         run: |
           brew install docker lima
-          brew install colima
           colima version
           colima start --cpu 3 --memory 6 --disk 100 --vm-type=qemu --mount-type=sshfs --dns=1.1.1.1
           docker run hello-world
