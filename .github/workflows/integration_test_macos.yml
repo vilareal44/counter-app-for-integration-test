@@ -8,19 +8,19 @@ jobs:
       - name: 📚 Git Checkout
         uses: actions/checkout@v3
 
-      - name: 🐦 Setup Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          channel: 'stable'
-          flutter-version: 3.19.5
-          cache: true
+      # - name: 🐦 Setup Flutter
+      #   uses: subosito/flutter-action@v2
+      #   with:
+      #     channel: 'stable'
+      #     flutter-version: 3.19.5
+      #     cache: true
 
       
 
       - name: 🚀 Run Integration Test
         run: |
           echo "foo"
-          docker --version
-          flutter config --enable-web
-          chromedriver --port=4444 --trace-buffer-size=100000 &          
-          flutter drive --driver=test_driver/integration_test.dart --target=integration_test/app_test.dart -d web-server --release --browser-name=chrome
+          colima version
+          # flutter config --enable-web
+          # chromedriver --port=4444 --trace-buffer-size=100000 &          
+          # flutter drive --driver=test_driver/integration_test.dart --target=integration_test/app_test.dart -d web-server --release --browser-name=chrome
