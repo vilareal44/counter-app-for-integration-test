@@ -15,7 +15,11 @@ jobs:
       #     flutter-version: 3.19.5
       #     cache: true
 
-      
+      - name: Install and start Colima
+        run: |
+          brew install colima
+          colima version
+          colima start --cpu 3 --memory 6 --disk 100 --vm-type=qemu --mount-type=sshfs --dns=1.1.1.1
 
       - name: 🚀 Run Integration Test
         run: |
